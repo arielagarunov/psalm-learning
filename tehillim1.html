@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehillim 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="audio-sync.js" defer></script>
+    <style>
+        /* Improved audio player style */
+        .audio-player {
+            width: 100%;
+            background: #f3f3f3;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .audio-player audio {
+            width: 100%;
+        }
+        .word {
+            display: inline-block;
+            margin: 0 2px;
+            transition: background-color 0.3s;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tehillim 1</h1>
+    <div class="audio-player">
+        <audio id="tehillim-audio" controls>
+            <source src="path/to/tehillim1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <p>
+        <span class="word">אשר</span>
+        <span class="word">את</span>
+        <span class="word">הלא</span>
+        <span class="word">ההלכ</span>
+        <span class="word">בח</span>
+        <span class="word">עצת</span>
+        <span class="word">רשעים</span>
+        <span class="word">ולא</span>
+        <span class="word">עמד</span>
+        <span class="word">בדרכי</span>
+        <span class="word">חטאים</span>
+        <span class="word">ולא</span>
+        <span class="word">ישב</span>
+        <span class="word">במושב</span>
+        <span class="word">לצינים</span>
+    </p>
+    <script>
+        const audio = document.getElementById('tehillim-audio');
+        const words = document.querySelectorAll('.word');
+
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+            words.forEach((word, index) => {
+                const wordStartTime = index * 1; // assuming each word is 1 sec duration for sync
+                const wordEndTime = (index + 1) * 1;
+
+                if (currentTime >= wordStartTime && currentTime < wordEndTime) {
+                    word.classList.add('highlight');
+                } else {
+                    word.classList.remove('highlight');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
