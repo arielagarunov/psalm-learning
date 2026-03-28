@@ -4,49 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psalms</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .search {
+            margin: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="top-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#psalms">Psalms</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <aside class="sidebar">
-            <h2>Categories</h2>
-            <ul>
-                <li><a href="#category1">Category 1</a></li>
-                <li><a href="#category2">Category 2</a></li>
-                <li><a href="#category3">Category 3</a></li>
-            </ul>
-        </aside>
-        <main class="content">
-            <h1>Psalms Collection</h1>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Psalms 1</h3>
-                    <p>Content of Psalm 1...</p>
-                </div>
-                <div class="card">
-                    <h3>Psalms 2</h3>
-                    <p>Content of Psalm 2...</p>
-                </div>
-                <div class="card">
-                    <h3>Psalms 3</h3>
-                    <p>Content of Psalm 3...</p>
-                </div>
-                <!-- More cards can be added here -->
-            </div>
-        </main>
+    <div class="navbar">
+        <h1>Psalms</h1>
     </div>
-    <footer>
-        <p>&copy; 2026 Psalms Collection</p>
-    </footer>
+    <div class="search">
+        <input type="text" placeholder="Search for a Psalm" id="searchBar">
+    </div>
+    <div id="psalmCards">
+        <!-- Cards for each psalm will be added here -->
+        <!-- Example card for Psalm 1 -->
+        <div class="card">Psalm 1: Blessed is the man who does not walk in the counsel of the wicked...</div>
+        <div class="card">Psalm 2: Why do the nations conspire and the peoples plot in vain?</div>
+        <!-- Repeat this structure for all 150 psalms -->
+    </div>
+    <script>
+        // JavaScript for search functionality can be added here
+    </script>
 </body>
 </html>
