@@ -35,17 +35,48 @@
     font-family: 'Assistant', sans-serif;
     transition: color 0.3s;
 }
-
-.nav-links a:hover {
-    color: #ffcc00;
+        
+.navbar {
+    background-color: #001a4d; /* Blue navbar */
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-        .navbar h1 {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 400;
-        }
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.navbar-content h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.nav-links a {
+    color: white; /* links are white */
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 400;
+    font-family: 'Assistant', sans-serif;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.nav-links a:hover {
+    background-color: #003d99; /* slightly darker blue */
+    transform: translateY(-3px); /* lift effect */
+    box-shadow: 0 6px 12px rgba(0, 26, 77, 0.25);
+    color: white; /* keep text white */
+}
         .search-container {
             max-width: 1200px;
             margin: 30px auto;
