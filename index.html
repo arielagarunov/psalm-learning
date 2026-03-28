@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Psalm 23</title>
+<title>Hebrew Psalms</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cardo&family=Assistant:wght@300;400;600&family=Noto+Serif+Hebrew&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cardo&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
     body {
@@ -17,7 +17,8 @@
     }
 
     .container {
-        max-width: 700px;
+        max-width: 800px;
+        width: 100%;
         padding: 50px 20px;
     }
 
@@ -34,42 +35,40 @@
         margin-bottom: 40px;
     }
 
-    .verse {
-        margin-bottom: 35px;
-        padding-bottom: 20px;
+    .section-title {
+        font-size: 20px;
+        margin-bottom: 15px;
         border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
     }
 
-    .hebrew {
-        font-family: 'Noto Serif Hebrew', serif;
-        font-size: 28px;
-        direction: rtl;
-        margin-bottom: 8px;
+    .psalm-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .transliteration {
-        font-family: 'Assistant', sans-serif;
-        font-size: 14px;
-        color: #888;
-        margin-bottom: 5px;
+    .psalm {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-decoration: none;
+        color: #222;
+        transition: 0.2s;
     }
 
-    .translation {
-        font-size: 18px;
-        line-height: 1.6;
-    }
-
-    button {
-        margin-top: 8px;
-        font-size: 12px;
-        padding: 5px 10px;
-        border: 1px solid #ccc;
-        background: none;
-        cursor: pointer;
-    }
-
-    button:hover {
+    .psalm:hover {
         background-color: #eee;
+    }
+
+    .psalm-title {
+        font-size: 18px;
+    }
+
+    .psalm-sub {
+        font-family: 'Assistant', sans-serif;
+        font-size: 13px;
+        color: #777;
+        margin-top: 3px;
     }
 </style>
 </head>
@@ -77,45 +76,31 @@
 <body>
 
 <div class="container">
-    <h1>Psalm 23</h1>
-    <div class="subtitle">Tehillim • Learn Hebrew Text</div>
+    <h1>Tehillim</h1>
+    <div class="subtitle">Learn Psalms in Hebrew, with transliteration and meaning</div>
 
-    <div class="verse">
-        <div class="hebrew">יְהוָה רֹעִי לֹא אֶחְסָר</div>
-        <div class="transliteration">Adonai ro’i lo echsar</div>
-        <div class="translation">The Lord is my shepherd; I shall not want.</div>
-        <button onclick="playAudio(1)">Play</button>
+    <div class="section-title">Psalms</div>
+
+    <div class="psalm-list">
+
+        <a class="psalm" href="psalm23.html">
+            <div class="psalm-title">Psalm 23</div>
+            <div class="psalm-sub">The Lord is my shepherd</div>
+        </a>
+
+        <a class="psalm" href="#">
+            <div class="psalm-title">Psalm 1</div>
+            <div class="psalm-sub">Coming soon</div>
+        </a>
+
+        <a class="psalm" href="#">
+            <div class="psalm-title">Psalm 121</div>
+            <div class="psalm-sub">Coming soon</div>
+        </a>
+
     </div>
-
-    <div class="verse">
-        <div class="hebrew">בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי</div>
-        <div class="transliteration">Bin’ot deshe yarbitzeni</div>
-        <div class="translation">He makes me lie down in green pastures.</div>
-        <button onclick="playAudio(2)">Play</button>
-    </div>
-
-    <div class="verse">
-        <div class="hebrew">עַל מֵי מְנֻחוֹת יְנַהֲלֵנִי</div>
-        <div class="transliteration">Al mei menuchot yenahaleini</div>
-        <div class="translation">He leads me beside still waters.</div>
-        <button onclick="playAudio(3)">Play</button>
-    </div>
-
-    <div class="verse">
-        <div class="hebrew">נַפְשִׁי יְשׁוֹבֵב</div>
-        <div class="transliteration">Nafshi yeshovev</div>
-        <div class="translation">He restores my soul.</div>
-        <button onclick="playAudio(4)">Play</button>
-    </div>
-
 </div>
-
-<script>
-function playAudio(num) {
-    const audio = new Audio("audio/verse" + num + ".mp3");
-    audio.play();
-}
-</script>
 
 </body>
 </html>
+
