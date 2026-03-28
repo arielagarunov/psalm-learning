@@ -1,70 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Psalm 23</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #e5e7eb;
-            text-align: center;
-            padding: 40px;
-        }
-        h1 {
-            margin-bottom: 30px;
-        }
-        .verse {
-            margin-bottom: 25px;
-        }
-        .hebrew {
-            font-size: 28px;
-            direction: rtl;
-        }
-        .transliteration {
-            font-size: 16px;
-            color: #94a3b8;
-        }
-        .translation {
-            font-size: 18px;
-            margin-top: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Psalm 23</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cardo&family=Assistant:wght@300;400;600&family=Noto+Serif+Hebrew&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background-color: #f9f7f3;
+        font-family: 'Cardo', serif;
+        color: #222;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 700px;
+        padding: 50px 20px;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-family: 'Assistant', sans-serif;
+        color: #666;
+        margin-bottom: 40px;
+    }
+
+    .verse {
+        margin-bottom: 35px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hebrew {
+        font-family: 'Noto Serif Hebrew', serif;
+        font-size: 28px;
+        direction: rtl;
+        margin-bottom: 8px;
+    }
+
+    .transliteration {
+        font-family: 'Assistant', sans-serif;
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 5px;
+    }
+
+    .translation {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    button {
+        margin-top: 8px;
+        font-size: 12px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        background: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #eee;
+    }
+</style>
 </head>
+
 <body>
 
+<div class="container">
     <h1>Psalm 23</h1>
-    <p>Learn to read, pronounce, and understand Psalm 23 in Hebrew.</p>
+    <div class="subtitle">Tehillim • Learn Hebrew Text</div>
 
     <div class="verse">
         <div class="hebrew">יְהוָה רֹעִי לֹא אֶחְסָר</div>
         <div class="transliteration">Adonai ro’i lo echsar</div>
         <div class="translation">The Lord is my shepherd; I shall not want.</div>
+        <button onclick="playAudio(1)">Play</button>
     </div>
 
     <div class="verse">
         <div class="hebrew">בִּנְאוֹת דֶּשֶׁא יַרְבִּיצֵנִי</div>
         <div class="transliteration">Bin’ot deshe yarbitzeni</div>
         <div class="translation">He makes me lie down in green pastures.</div>
+        <button onclick="playAudio(2)">Play</button>
     </div>
 
     <div class="verse">
         <div class="hebrew">עַל מֵי מְנֻחוֹת יְנַהֲלֵנִי</div>
         <div class="transliteration">Al mei menuchot yenahaleini</div>
         <div class="translation">He leads me beside still waters.</div>
+        <button onclick="playAudio(3)">Play</button>
     </div>
 
     <div class="verse">
         <div class="hebrew">נַפְשִׁי יְשׁוֹבֵב</div>
         <div class="transliteration">Nafshi yeshovev</div>
         <div class="translation">He restores my soul.</div>
+        <button onclick="playAudio(4)">Play</button>
     </div>
 
-    <div class="verse">
-        <div class="hebrew">יַנְחֵנִי בְמַעְגְּלֵי צֶדֶק לְמַעַן שְׁמוֹ</div>
-        <div class="transliteration">Yancheini b’ma’aglei tzedek lema’an shmo</div>
-        <div class="translation">He leads me in paths of righteousness for His name’s sake.</div>
-    </div>
+</div>
+
+<script>
+function playAudio(num) {
+    const audio = new Audio("audio/verse" + num + ".mp3");
+    audio.play();
+}
+</script>
 
 </body>
 </html>
