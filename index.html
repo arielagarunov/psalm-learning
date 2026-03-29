@@ -27,13 +27,31 @@
     margin: 0 auto;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 400;
+.nav-links select,
+#themeToggle {
+    margin-left: 15px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
     font-family: 'Assistant', sans-serif;
-    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.nav-links select {
+    background-color: white;
+    color: #001a4d;
+}
+
+#themeToggle {
+    background-color: white;
+    color: #001a4d;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
         
 .navbar {
@@ -153,17 +171,55 @@
             color: #999;
             font-size: 18px;
         }
+
+    .dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar {
+    background-color: #000d26;
+}
+
+.dark-mode .card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+.dark-mode .card-description {
+    color: #bbb;
+}
+
+.dark-mode #searchBar {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: #555;
+}
     </style>
 </head>
 <body>
 <div class="navbar">
     <div class="navbar-content">
         <h1>Learn Tehillim</h1>
-        <nav class="nav-links">
-            <a href="about.html">About</a>
-            <a href="info.html">Info</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+       <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="info.html">Info</a>
+    <a href="contact.html">Contact</a>
+
+    <select id="languageSelect">
+        <option value="en">EN</option>
+        <option value="he">HE</option>
+    </select>
+
+    <select id="nusachSelect">
+        <option value="ashkenaz">Ashkenaz</option>
+        <option value="sefard">Sefard</option>
+        <option value="edot">Edot Mizrach</option>
+    </select>
+
+    <button id="themeToggle">🌙</button>
+</nav>
     </div>
 </div>
 
