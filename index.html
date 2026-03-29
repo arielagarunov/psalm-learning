@@ -197,8 +197,10 @@ body {
             </select>
 
             <select id="nusachSelect">
-                <option>Ashkenaz</option>
-                <option>Sefard</option>
+                <option>Ashkenazi</option>
+                <option>Yemeni</option>
+                <option>Yerushalmi</option>
+                <option>Morrocan</option>
             </select>
 
             <button id="themeToggle">🌙</button>
@@ -208,7 +210,7 @@ body {
 
 <div class="hero">
     <h2>Which Psalm Would You Like to Explore Today?</h2>
-    <p>Search, reflect, and connect with timeless words.</p>
+    <p>The Psalms Of David HaMelech.</p>
 </div>
 
 <div class="search-container">
@@ -240,7 +242,6 @@ function renderCards(data){
         card.href=`Tehillim${t.num}.html`;
         card.innerHTML=`
             <div class="card-title">Tehillim ${t.num}</div>
-            <div class="card-description">${t.title}</div>
         `;
         container.appendChild(card);
     });
