@@ -15,9 +15,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    background: linear-gradient(135deg, #f8fafc, #eef2f7);
     font-family: 'Cardo', serif;
-    color: #1f2937;
+    color: #1e293b;
 }
 
 /* NAVBAR */
@@ -29,7 +29,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .navbar-content {
@@ -40,12 +39,6 @@ body {
     margin: 0 auto;
 }
 
-.navbar-content h1 {
-    font-size: 26px;
-    font-weight: 400;
-}
-
-/* NAV LINKS */
 .nav-links {
     display: flex;
     align-items: center;
@@ -56,58 +49,73 @@ body {
     text-decoration: none;
     margin-left: 15px;
     padding: 8px 12px;
-    border-radius: 10px;
-    font-family: 'Assistant', sans-serif;
-    transition: all 0.25s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: rgba(255,255,255,0.15);
+    background-color: #003d99;
     transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
 }
 
 /* SELECTS + BUTTON */
 .nav-links select,
 #themeToggle {
-    margin-left: 12px;
+    margin-left: 10px;
     padding: 6px 10px;
-    border-radius: 8px;
+    border-radius: 6px;
     border: none;
-    font-family: 'Assistant', sans-serif;
     cursor: pointer;
 }
 
-#themeToggle {
-    font-size: 16px;
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.hero p {
+    font-family: 'Assistant', sans-serif;
+    color: #64748b;
 }
 
 /* SEARCH */
 .search-container {
-    max-width: 900px;
-    margin: 40px auto 20px;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 0 20px;
 }
 
 #searchBar {
     width: 100%;
     padding: 14px 18px;
-    font-size: 16px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* BUTTON */
+.toggle-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#toggleButton {
+    padding: 10px 18px;
+    border-radius: 10px;
     border: none;
-    border-radius: 14px;
-    font-family: 'Assistant', sans-serif;
-    background: white;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: all 0.25s ease;
+    background: #e2e8f0;
+    cursor: pointer;
 }
 
-#searchBar:focus {
-    outline: none;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
-
-/* GRID */
+/* CARDS */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -118,58 +126,46 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 24px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-/* CARDS */
 .card {
     background: white;
-    border-radius: 18px;
+    border-radius: 16px;
     padding: 22px;
-    cursor: pointer;
-    transition: all 0.25s ease;
     text-decoration: none;
     color: inherit;
-    display: block;
-
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 .card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
-/* COLOR STRIPS */
-.card:nth-child(4n+1) { border-top: 4px solid #6366f1; }
-.card:nth-child(4n+2) { border-top: 4px solid #22c55e; }
-.card:nth-child(4n+3) { border-top: 4px solid #f59e0b; }
-.card:nth-child(4n+4) { border-top: 4px solid #ef4444; }
-
 .card-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #1e3a8a;
+    font-size: 18px;
+    color: #334155;
 }
 
 .card-description {
     font-size: 14px;
-    color: #6b7280;
+    color: #64748b;
     font-family: 'Assistant', sans-serif;
 }
 
-.no-results {
-    text-align: center;
-    padding: 40px;
-    color: #888;
-}
+/* SACRED COLORS */
+.card:nth-child(4n+1) { border-top: 3px solid #94a3b8; }
+.card:nth-child(4n+2) { border-top: 3px solid #a3a380; }
+.card:nth-child(4n+3) { border-top: 3px solid #bfa181; }
+.card:nth-child(4n+4) { border-top: 3px solid #9c6644; }
 
 /* DARK MODE */
 .dark-mode {
     background: linear-gradient(135deg, #0f172a, #020617);
-    color: #e5e7eb;
+    color: white;
 }
 
 .dark-mode .card {
@@ -181,10 +177,6 @@ body {
     background: #1e293b;
     color: white;
 }
-
-.dark-mode .card-description {
-    color: #94a3b8;
-}
 </style>
 </head>
 
@@ -193,9 +185,8 @@ body {
 <div class="navbar">
     <div class="navbar-content">
         <h1>Learn Tehillim</h1>
-
         <nav class="nav-links">
-            <a href="index.html">Home</a>
+            <a href="#">Home</a>
             <a href="about.html">About</a>
             <a href="info.html">Info</a>
             <a href="contact.html">Contact</a>
@@ -206,9 +197,8 @@ body {
             </select>
 
             <select id="nusachSelect">
-                <option value="ashkenaz">Ashkenaz</option>
-                <option value="sefard">Sefard</option>
-                <option value="edot">Edot Mizrach</option>
+                <option>Ashkenaz</option>
+                <option>Sefard</option>
             </select>
 
             <button id="themeToggle">🌙</button>
@@ -216,13 +206,21 @@ body {
     </div>
 </div>
 
+<div class="hero">
+    <h2>Which Psalm Would You Like to Explore Today?</h2>
+    <p>Search, reflect, and connect with timeless words.</p>
+</div>
+
 <div class="search-container">
     <input type="text" id="searchBar" placeholder="Search Tehillim...">
 </div>
 
+<div class="toggle-container">
+    <button id="toggleButton">Hide Tehillim</button>
+</div>
+
 <div class="container">
     <div class="cards-grid" id="TehillimCards"></div>
-    <div id="noResults" class="no-results" style="display:none;">No results found</div>
 </div>
 
 <script>
@@ -233,67 +231,47 @@ const TehillimData = Array.from({length:150}, (_,i)=>({
 
 const container = document.getElementById('TehillimCards');
 const searchBar = document.getElementById('searchBar');
-const noResults = document.getElementById('noResults');
 
-function renderCards(data) {
-    container.innerHTML = '';
-    if (data.length === 0) {
-        noResults.style.display = 'block';
-        return;
-    }
-    noResults.style.display = 'none';
-
-    data.forEach(t => {
-        const card = document.createElement('a');
-        card.href = `Tehillim${t.num}.html`;
-        card.className = 'card';
-
-        card.innerHTML = `
+function renderCards(data){
+    container.innerHTML='';
+    data.forEach(t=>{
+        const card=document.createElement('a');
+        card.className='card';
+        card.href=`Tehillim${t.num}.html`;
+        card.innerHTML=`
             <div class="card-title">Tehillim ${t.num}</div>
-            <div class="card-description">Click to learn</div>
+            <div class="card-description">${t.title}</div>
         `;
-
         container.appendChild(card);
     });
 }
 
-searchBar.addEventListener('input', e => {
-    const q = e.target.value.toLowerCase();
-    const filtered = TehillimData.filter(t =>
-        t.num.toString().includes(q)
-    );
-    renderCards(filtered);
+searchBar.addEventListener('input', e=>{
+    const q=e.target.value.toLowerCase();
+    renderCards(TehillimData.filter(t=>t.num.toString().includes(q)));
 });
 
 renderCards(TehillimData);
 
-/* DARK MODE */
-const themeToggle = document.getElementById('themeToggle');
+/* TOGGLE */
+const toggleButton=document.getElementById('toggleButton');
+let visible=true;
 
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggle.textContent = '☀️';
-}
-
-themeToggle.onclick = () => {
-    document.body.classList.toggle('dark-mode');
-
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme','dark');
-        themeToggle.textContent = '☀️';
-    } else {
-        localStorage.setItem('theme','light');
-        themeToggle.textContent = '🌙';
-    }
+toggleButton.onclick=()=>{
+    visible=!visible;
+    container.style.display=visible?'grid':'none';
+    toggleButton.textContent=visible?'Hide Tehillim':'Show Tehillim';
 };
 
-/* SAVE SETTINGS */
-document.getElementById('languageSelect').onchange = e =>
-    localStorage.setItem('language', e.target.value);
+/* DARK MODE */
+const themeToggle=document.getElementById('themeToggle');
 
-document.getElementById('nusachSelect').onchange = e =>
-    localStorage.setItem('nusach', e.target.value);
+themeToggle.onclick=()=>{
+    document.body.classList.toggle('dark-mode');
+};
 </script>
 
 </body>
 </html>
+
+
